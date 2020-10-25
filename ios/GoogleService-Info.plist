@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>81345722441-s1hoofjif8mg7fvppfp8th9h4pclcb81.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.81345722441-s1hoofjif8mg7fvppfp8th9h4pclcb81</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCto35f2kEshSwylrqMdZzvkHShF27nfiE</string>
+	<key>GCM_SENDER_ID</key>
+	<string>81345722441</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>org.reactjs.native.example.HealthLineApp</string>
+	<key>PROJECT_ID</key>
+	<string>technica2020-92bdd</string>
+	<key>STORAGE_BUCKET</key>
+	<string>technica2020-92bdd.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:81345722441:ios:88f387a9e0cbd5acd3e798</string>
+	<key>DATABASE_URL</key>
+	<string>https://technica2020-92bdd.firebaseio.com</string>
+</dict>
+</plist>

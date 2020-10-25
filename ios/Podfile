@@ -8,6 +8,9 @@ target 'HealthLineApp' do
 
   use_react_native!(:path => config["reactNativePath"])
 
+  pod 'Firebase/Analytics'
+  pod 'Firebase/Auth'
+
   target 'HealthLineAppTests' do
     inherit! :complete
     # Pods for testing

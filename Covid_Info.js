@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import { StyleSheet, View, TouchableOpacity, Text, Button } from 'react-native';
+import PrimaryButton from './components/PrimaryButton';
 import axios from 'axios';
 import RNPickerSelect from 'react-native-picker-select';
 import { global, pickerSelectStyles } from './style';
@@ -287,9 +288,9 @@ export default class DataPage extends Component{
 
 	render(){
 	return (
-		<View style={global.container}>
-      <Text style={{ fontSize: 30, textAlign: 'center', padding: 10 }}>
-       covid data!
+		<View style={styles.container}>
+      <Text style={ styles.text }>
+       Covid Data
       </Text>
 
 			<RNPickerSelect 
@@ -301,10 +302,9 @@ export default class DataPage extends Component{
 				style={{ ...pickerSelectStyles }}
 				value={this.state.selectedCountry}
 			/>
-			<Button
+			<PrimaryButton
 				onPress={ this.onPressButton }
-				color="#5DB075"
-				title="Get Data"
+				buttonTitle="Get Data"
 			/>
 		
 			<Text style={global.text_info}>
@@ -321,3 +321,15 @@ export default class DataPage extends Component{
 	}
 }
 
+const styles = StyleSheet.create({
+	container: {
+	  flex: 1,
+	  justifyContent: 'center',
+	  alignItems: 'center'
+	},
+	text: {
+	  fontSize: 24,
+	  marginBottom: 10,
+	  color: '#5db075'
+	}
+  });
