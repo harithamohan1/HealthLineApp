@@ -1,0 +1,6 @@
+module Pods_HealthLineApp {
+  umbrella header "Pods-HealthLineApp-umbrella.h"
+
+  export *
+  module * { export * }
+}

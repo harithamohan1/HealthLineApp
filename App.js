@@ -1,54 +1,48 @@
-// import { StatusBar } from 'expo-status-bar';
-// import React from 'react';
-// import { StyleSheet, Text, View } from 'react-native';
-
-
-// //View -> UIView
-// export default function App() {
-//   return (
-//     <View style={styles.container}>
-//       <Text>Open up App.js to start working on your app!</Text>
-//       <StatusBar style="auto" />
-//     </View>
-//   );
-// }
-
-// const styles = StyleSheet.create({
-//   container: {
-//     flex: 1,
-//     backgroundColor: '#fff',
-//     alignItems: 'center',
-//     justifyContent: 'center',
-//   },
-// });
-
 import React from 'react';
-import {View, Text, Image, StyleSheet} from 'react-native'
+import {View, Text, Image, StyleSheet, Button} from 'react-native'
+import { NavigationContainer } from '@react-navigation/native';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { createStackNavigator } from '@react-navigation/stack';
+import DataPage from './Covid_Info';
+import Resources from './Resources';
+import {global, header} from './style';
+
+const Stack = createStackNavigator();
+const Tab = createBottomTabNavigator();
 
 const App = () => {
   return (
-    <View style={styles.container}> 
-      <Text style={styles.text}>Welcome to HealthLine</Text>
-      <Image source={{uri: 'https://www.tc.columbia.edu/media/news/images/2020/may/covid-doctors-istock.jpg'}} style={styles.img}/>
-    </View> 
+		<NavigationContainer>
+			<Stack.Navigator initialRouteName = 'Home' screenOptions={header} headerMode='float'>
+			<Stack.Screen name = ' ' component={MainTabNavigator} />
+			</Stack.Navigator>
+		</NavigationContainer>
   );
 };
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1, 
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  text: {
-    color: 'darkslateblue',
-    fontSize: 30,
-  },
-  img: {
-    width: 100,
-    height: 100,
-    //borderRadius: 100/2,
-  }
-});
+export function MainTabNavigator(){
+	return(
+			<Tab.Navigator>
+				<Tab.Screen
+					name="Home"
+					component={HomeScreen}
+					options={{title:'Welcome'}}
+				/>
+				<Tab.Screen name="CovidData" component={DataPage} />
+				<Tab.Screen name="Resources" component={Resources} />
+			</Tab.Navigator>
 
+	)
+}
+
+const HomeScreen = ({navigation}) => {
+	return (
+    <View style={global.container}> 
+      <Text style={global.text}>Welcome to HealthLine</Text>
+      <Image source={{uri: 'https://www.tc.columbia.edu/media/news/images/2020/may/covid-doctors-istock.jpg'}} style={global.img}/>
+			<Button title="covid" onPress={() => navigation.navigate('CovidData')} />
+    </View>
+	);
+};
+ 
 export default App;
