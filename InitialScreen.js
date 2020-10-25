@@ -1,5 +1,5 @@
 import React, { useState, useContext } from 'react';
-import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
+import { Image, View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 import PrimaryButton from './components/PrimaryButton';
 import SecondaryButton from './components/SecondaryButton'
 
@@ -8,7 +8,7 @@ export default function InitialScreen({ navigation }) {
         <View style={styles.container}>
             <Text style={styles.titleText}>Healthline</Text>
             <Text style={styles.subtitleText}>Your personal healthline at your fingertips</Text>
-            
+            <Image source={require('./assets/images/home.png')} style={styles.img}/>
             <PrimaryButton buttonTitle='Get Started'
                 onPress={() => navigation.navigate('Signup')} />
             <SecondaryButton buttonTitle='Log In' onPress={() => navigation.navigate('Login')} />
@@ -29,5 +29,9 @@ const styles = StyleSheet.create({
     subtitleText: {
         fontSize: 12,
         color: '#7c7c7c'
+    },
+    img: {
+        width: 300,
+        height: 300,
     }
 })

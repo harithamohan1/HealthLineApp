@@ -8,6 +8,7 @@ import Resources from './Resources';
 import {global, header} from './style';
 import PrimaryButton from './components/PrimaryButton';
 import { AuthContext } from './navigation/AuthProvider'
+import auth from '@react-native-firebase/auth'
 
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -37,9 +38,10 @@ export function MainTabNavigator(){
 
 
 const HomeScreen = ({navigation}) => {
+    const { user } = useContext(AuthContext)
 	return (
     <View style={styles.container}> 
-      <Text style={styles.text}>Welcome to HealthLine</Text>
+      <Text style={styles.titleText}>Welcome, {user.email}!</Text>
       <Image source={require('./assets/images/home.png')} style={styles.img}/>
 	  <PrimaryButton buttonTitle="Covid" onPress={() => navigation.navigate('CovidData')} />
     </View>
@@ -53,6 +55,14 @@ const styles = StyleSheet.create( {
         justifyContent: 'center',
         alignItems: 'center',
         backgroundColor: '#f5f5f5'
+    },
+    titleText: {
+        fontSize: 36,
+        color: '#5db075'
+    },
+    subtitleText: {
+        fontSize: 12,
+        color: '#7c7c7c'
     },
     text: {
         fontSize: 20,
