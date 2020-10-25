@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import { StyleSheet, View, Text } from 'react-native';
+import PrimaryButton from './components/PrimaryButton'
 import { global } from './style';
 
 export default class Resources extends Component{

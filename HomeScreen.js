@@ -17,8 +17,6 @@ const App = () => {
         <Stack.Navigator initialRouteName = 'Home' screenOptions={header} headerMode='float'>
 			<Stack.Screen name = ' ' component={MainTabNavigator} />
 		</Stack.Navigator>
-			
-		
   );
 };
 
@@ -42,8 +40,8 @@ const HomeScreen = ({navigation}) => {
 	return (
     <View style={styles.container}> 
       <Text style={styles.text}>Welcome to HealthLine</Text>
-      <Image source={{uri: 'assets/images/home.png'}} style={sytles.img}/>
-			<Button title="covid" onPress={() => navigation.navigate('CovidData')} />
+      <Image source={require('./assets/images/home.png')} style={styles.img}/>
+	  <PrimaryButton buttonTitle="Covid" onPress={() => navigation.navigate('CovidData')} />
     </View>
 	);
 };
@@ -61,9 +59,8 @@ const styles = StyleSheet.create( {
         color: '#333333'
     },
     img: {
-        flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center'
+        width: 300,
+        height: 300,
     }
 })
 
