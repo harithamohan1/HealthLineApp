@@ -1,3 +1,5 @@
+![mockup](/demos/mockup.png)
+</br>
 # HealthLineApp
 Healthcare workers often live in a constant state of fear of catching and spreading the virus to others around them. Many are even under a lot of psychological stress due to things like fear of infection and lack of social support and felt that they lacked pandemic preparedness.Delays in testing meant many workers are left unsure of whether or not they are infected or not, leading to unknowingly spreading the virus and causing staff shortages.
 
@@ -12,6 +14,3 @@ We hope to launch our app on the app store and allow it to be used by actual hea
 App Demo: https://youtu.be/fchtkIxrPOY
 </br>
 Figma Demo: https://www.figma.com/proto/X8yjpncKWAdFPzyD8L8Et3/Technica-2020?node-id=1%3A2&scaling=scale-down
-
-
-![mockup](/demos/mockup.png)
