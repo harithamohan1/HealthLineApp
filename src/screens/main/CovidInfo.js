@@ -1,16 +1,16 @@
-import React, {Component} from 'react';
-import { StyleSheet, View, TouchableOpacity, Text, Button } from 'react-native';
-import PrimaryButton from './components/PrimaryButton';
-import axios from 'axios';
-import RNPickerSelect from 'react-native-picker-select';
-import { global, pickerSelectStyles } from './style';
+import React, {Component} from 'react'
+import { StyleSheet, View, TouchableOpacity, Text, Button } from 'react-native'
+import PrimaryButton from 'library/components/PrimaryButton'
+import axios from 'axios'
+import RNPickerSelect from 'react-native-picker-select'
+import { global, pickerSelectStyles } from 'res/style'
 
 export default class DataPage extends Component{
 	constructor(){
 		super();
 		this.state = {
 		selectedCountry: undefined,
-		items: [
+		items:[
 					{ label:'Azerbaijan', value: 'Azerbaijan'},
 					{ label:'Afghanistan', value: 'Afghanistan'},
 					{ label: 'Albania', value: 'Albania'},
@@ -249,8 +249,8 @@ export default class DataPage extends Component{
 					{ label: 'Western Sahara', value: 'Western Sahara'},
 					{ label: 'Yemen', value: 'Yemen'},
 					{ label: 'Zambia', value: 'Zambia'},
-					{ label: 'Zimbabwe', value: 'Zimbabwe'},		
-		],
+					{ label: 'Zimbabwe', value: 'Zimbabwe'},
+			],
 			country: '',
 			date: '',
 			latest_confirm: '',
@@ -288,12 +288,9 @@ export default class DataPage extends Component{
 
 	render(){
 	return (
-		<View style={styles.container}>
-      <Text style={ styles.text }>
-       Covid Data
-      </Text>
-
-			<RNPickerSelect 
+		<View style={global.container}>
+			
+		<RNPickerSelect 
 				placeholder={{ label: 'Select a country...', value: null, }}
 				items={this.state.items}
 				onValueChange={(value) => {
@@ -320,16 +317,3 @@ export default class DataPage extends Component{
 	);
 	}
 }
-
-const styles = StyleSheet.create({
-	container: {
-	  flex: 1,
-	  justifyContent: 'center',
-	  alignItems: 'center'
-	},
-	text: {
-	  fontSize: 24,
-	  marginBottom: 10,
-	  color: '#5db075'
-	}
-  });

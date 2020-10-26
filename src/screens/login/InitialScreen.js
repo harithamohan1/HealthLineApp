@@ -1,14 +1,14 @@
 import React, { useState, useContext } from 'react';
 import { Image, View, Text, StyleSheet, TouchableOpacity } from 'react-native';
-import PrimaryButton from './components/PrimaryButton';
-import SecondaryButton from './components/SecondaryButton'
+import PrimaryButton from 'library/components/PrimaryButton';
+import SecondaryButton from 'library/components/SecondaryButton'
 
 export default function InitialScreen({ navigation }) {
     return (
         <View style={styles.container}>
             <Text style={styles.titleText}>Healthline</Text>
             <Text style={styles.subtitleText}>Your personal healthline at your fingertips</Text>
-            <Image source={require('./assets/images/home.png')} style={styles.img}/>
+            <Image source={require('res/assets/images/home.png')} style={styles.img}/>
             <PrimaryButton buttonTitle='Get Started'
                 onPress={() => navigation.navigate('Signup')} />
             <SecondaryButton buttonTitle='Log In' onPress={() => navigation.navigate('Login')} />

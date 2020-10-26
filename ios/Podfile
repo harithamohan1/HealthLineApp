@@ -11,6 +11,7 @@ target 'HealthLineApp' do
   pod 'Firebase/Analytics'
   pod 'Firebase/Auth'
 
+
   target 'HealthLineAppTests' do
     inherit! :complete
     # Pods for testing

@@ -1,9 +1,9 @@
 import React, { useState, useContext } from 'react';
 import { View, Text, StyleSheet } from 'react-native';
-import PrimaryButton from './components/PrimaryButton';
-import SecondaryButton from './components/SecondaryButton'
-import FormInput from './components/FormInput';
-import { AuthContext } from './navigation/AuthProvider'
+import PrimaryButton from 'library/components/PrimaryButton';
+import SecondaryButton from 'library/components/SecondaryButton'
+import FormInput from 'library/components/FormInput';
+import { AuthContext } from 'navigation/AuthProvider'
 
 export default function SignupScreen({ navigation }) {
   const [email, setEmail] = useState('');
